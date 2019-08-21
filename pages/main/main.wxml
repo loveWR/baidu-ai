@@ -1,0 +1,26 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+<view slot="backText">返回</view>
+
+</cu-custom>
+
+<view>
+
+<scroll-view scroll-y class="scrollPage">
+   <image src='/images/wave.gif' mode='widthFix' class='gif' style='width:100%;height:486rpx'></image>
+  <view class='nav-list'>
+    <navigator open-type="navigate" hover-class='none' url="" class="nav-li bg-green" >
+      <view class="nav-title">车辆识别</view>
+      <view class="nav-name">Car</view>
+      <text class='cuIcon-icon'></text>
+    </navigator>
+    <navigator open-type="navigate" hover-class='none' url="/pages/ai/flower" class="nav-li bg-green" >
+      <view class="nav-title">花卉识别</view>
+      <view class="nav-name">Flower</view>
+      <text class='cuIcon-icon'></text>
+    </navigator>
+  </view>
+  
+  <view class='cu-tabbar-height'></view>
+</scroll-view>
+
+</view>
