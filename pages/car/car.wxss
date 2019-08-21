@@ -1,0 +1,4 @@
+/* pages/car/car.wxss */
+.text-content{
+  margin-top: 5px
+}

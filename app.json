@@ -1,11 +1,14 @@
 {
   "pages": [
-    "pages/main/main"
-    
+    "pages/main-index/main",
+    "pages/car/car",
+    "pages/flower/flower",
+    "pages/plant/plant",
+    "pages/common/common"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",
-    "navigationBarTitleText": "AI",
+    "navigationBarTitleText": "Color UI",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white"
   },

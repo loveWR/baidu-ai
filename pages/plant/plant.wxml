@@ -1,0 +1,56 @@
+<cu-custom bgColor="bg-gradual-green" isBack="true">
+  <view slot="backText">返回</view>
+</cu-custom>
+
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    选择图片
+
+  </view>
+  <button class="cu-btn round bg-green shadow" bindtap='ai_plant'>上传识别</button>
+</view>
+<view class="cu-form-group">
+  <view class="grid col-4 grid-square flex-sub">
+    <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+      <image src='{{imgList[index]}}' mode='aspectFill'></image>
+      <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+        <text class="cuIcon-close"></text>
+      </view>
+    </view>
+    <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<1}}">
+      <text class="cuIcon-cameraadd"></text>
+    </view>
+  </view>
+</view>
+<!-- 匹配到的结果 -->
+
+<view class="cu-card dynamic no-card" wx:if="{{matchList.length>0}}">
+  <view class="cu-item shadow">
+
+    <view class="text-content">
+      相似度最高：
+      <view class="cu-tag bg-blue">{{matchList[0]['name']}}</view>
+      <view  wx:if="matchList[0]['baike_info']">
+        <view >{{matchList[0]['baike_info']['description']}}</view>
+      </view>
+    </view>
+    <view class="grid flex-sub padding-lr col-3 grid-square">
+      <view class="bg-img only-img" style="background-image:url({{imgList[0]}});">
+      </view>
+    </view>
+
+    <view class="cu-list menu-avatar comment solids-top">
+      <view class="content">
+        <view class="bg-white padding-sm radius margin-top-sm  text-sm">
+          <view class="flex">
+            更多相似：{{matchList.length>1?"":"无"}}
+              <view class="cu-tag bg-blue"  wx:if="{{matchList.length>1}}">{{matchList[1]['name']}}</view>
+              <view class="cu-tag bg-blue"  wx:if="{{matchList.length>2}}">{{matchList[2]['name']}}</view>
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+</view>

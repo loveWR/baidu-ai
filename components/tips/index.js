@@ -28,7 +28,7 @@ Component({
   ready: function () {
     // 判断是否已经显示过
     let cache = wx.getStorageSync(STORAGE_KEY);
-     if (cache) return;
+    // if (cache) return;
      /**
      * 30天内不显示
      */

@@ -1,6 +1,6 @@
 .box {
   position: fixed;
-  top: 0;
+  top:49px ;
   /* left: 0; */
   right: 0;
   z-index: 999;
